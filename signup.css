@@ -1,0 +1,69 @@
+.background-white {
+  background-color: #fff;
+}
+
+.social-login {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+.social-login .icon {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 20px;
+  padding: 8px 15px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.facebook {
+  background-color: #3b5998;
+}
+
+.x-app {
+  background-color: #64ccf1;
+}
+
+.google {
+  background-color: #db4437;
+}
+
+.text-div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #e6e6e6;
+  margin: 0 10px;
+}
+
+.text {
+  text-align: center;
+  border: 1px solid #e6e6e6;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-weight: 600;
+}
+
+.signup-form .form-control {
+  border-radius: 20px;
+}
+
+.signup-form .btn {
+  border-radius: 20px;
+}
+
+.signup-form a {
+  text-decoration: none;
+  color: #5cb85c !important;
+}
+
+.signup-form a:hover {
+  text-decoration: underline;
+}

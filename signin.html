@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="container ">
+        <div class="row justify-content-center background-white">
+            <div class="col-md-6">
+                <div class="text-center">
+                    <h2 class="mt-5 mb-4">Log in</h2>
+                    <p>Log in with your social media account or email address</p>
+                </div>
+
+                <div class="container mt-2">
+                    <div class="social-login">
+                        <div class="facebook icon">
+                            <i class="fab fa-facebook-f"> facebook</i>
+                        </div>
+                        <div class="x-app icon">
+                            <i class="fab fa-twitter"> twitter</i>
+                        </div>
+                        <div class="google icon">
+                            <i class="fab fa-google"> google</i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-div">
+                    <div class="line"></div>
+                    <div class="text">Or</div>
+                    <div class="line"></div>
+                </div>
+
+                <form method="post" action="signin.php" class="signup-form">
+                    <div class="form-group">
+                        <!-- <label for="username">Username:</label> -->
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
+                    </div>
+
+                    
+
+                    <div class="form-group">
+                        <!-- <label for="password">Password:</label> -->
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+                    </div>
+
+                   
+
+                    <button type="submit" class="btn btn-success btn-block mt-4 mb-4" name="signup">Sign Up</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (optional, only if you need JS features) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
