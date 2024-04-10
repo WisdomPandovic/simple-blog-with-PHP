@@ -18,3 +18,16 @@ form {
 .post img{
     width: 100%;
   }
+
+  .sections {
+margin: 5px 0;
+
+  }
+
+  .background-white {
+    background-color: #fff;
+  }
+
+  .advert{
+    padding: 10px;
+  }

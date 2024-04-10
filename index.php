@@ -46,7 +46,7 @@
   </div>
 </nav> -->
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container">
     <a class="navbar-brand" href="#">Simple Blog</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,22 +56,22 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#"><i class="fas fa-home"></i> <span class="sr-only">(current)</span></a>
+                <a class="nav-link text-white" href="#"><i class="fas fa-home"></i> <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fas fa-info-circle"></i> About</a>
+                <a class="nav-link text-white" href="#"><i class="fas fa-info-circle"></i> About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fas fa-envelope"></i> Contact</a>
+                <a class="nav-link text-white" href="#"><i class="fas fa-envelope"></i> Contact</a>
             </li>
         </ul>
 
         <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fas fa-bell"></i> Notifications</a>
+                <a class="nav-link text-white" href="#"><i class="fas fa-bell"></i> Notifications</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-user"></i> Profile
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -83,7 +83,7 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fas fa-search"></i> Search</a>
+                <a class="nav-link text-white" href="#"><i class="fas fa-search"></i> Search</a>
             </li>
         </ul>
     </div>
@@ -91,23 +91,35 @@
 </nav>
 
 
-<div class="container mt-4">
+<div class="container-fluid mt-4">
   <div class="row">
-    <div class="col-md-2 line">
+    <div class="col-md-3">
       <!-- Sidebar will go here -->
       <h4>Categories</h4>
       <ul class="list-group">
-        <li class="list-group-item">Category 1</li>
-        <li class="list-group-item">Category 2</li>
-        <li class="list-group-item">Category 3</li>
-        <!-- Add more categories here -->
+        <li class="list-group-item">Football</li>
+        <li class="list-group-item">Fashion</li>
+        <li class="list-group-item">Entertainment</li>
+        <li class="list-group-item"><i class="fas fa-ellipsis-h text-primary"></i> See More</li>
       </ul>
+
+    <div class="sections">
+    <h4>Sections</h4>
+    <ul class="list-group">
+        <li class="list-group-item"><i class="fas fa-newspaper text-primary"></i> Latest News</li>
+        <li class="list-group-item"><i class="fas fa-user-friends text-primary"></i> Friends</li>
+        <li class="list-group-item"><i class="fas fa-users text-primary"></i> Groups</li>
+        <li class="list-group-item"><i class="fas fa-shopping-bag text-primary"></i> Marketplace</li>
+        <li class="list-group-item"><i class="fas fa-tv text-primary"></i> Watch</li>
+        <li class="list-group-item"><i class="fas fa-ellipsis-h text-primary"></i> See More</li>
+    </ul>
+    </div>
     </div>
 
-    <div class="col-md-7">
+    <div class="col-md-6">
       <!-- Main content area will go here -->
-      <h2>Welcome to Simple Blog</h2>
-      <p>This is a simple blog platform built with Bootstrap and PHP.</p>
+      <!-- <h2>Welcome to Simple Blog</h2>
+      <p>This is a simple blog platform built with Bootstrap and PHP.</p> -->
 
        <!-- Form for creating a new post -->
     <!-- Form for creating a new post -->
@@ -172,18 +184,18 @@
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
-    <div id="postsContainer" class="postsContainer background-white"></div>
+    <div id="postsContainer" class="postsContainer"></div>
     </div>
 
-    <div class="col-md-3 line">
-      <!-- Sidebar will go here -->
-      <h4>Categories</h4>
-      <ul class="list-group">
-        <li class="list-group-item">Category 1</li>
-        <li class="list-group-item">Category 2</li>
-        <li class="list-group-item">Category 3</li>
-        <!-- Add more categories here -->
-      </ul>
+    <div class="col-md-3">
+      
+      <div class="background-white advert">
+        <div class="d-flex justify-content-between">
+            <p>Avertisement</p>
+            <p class="text-primary">Close</p>
+        </div>
+        <img src="./images/auto.png" class="img-fluid d-block w-100"  alt="Image 1">
+      </div>
     </div>
   </div>
 </div>
@@ -232,13 +244,13 @@ crossorigin="anonymous"></script>
 
                 // Generate HTML for the entire post
                 const postHTML = `
-                    <div class="post background-white mt-3">
+                    <div class="post background-white mt-3 ">
                         <div class="d-flex justify-content-between">
                             <div class="mb-3">
                                 <h2>${post.username} <br></h2>
                                 <span>${post.created_at}</span>
                             </div>
-                            <div><p>Visibility: ${isPublicPost ? 'Public' : 'Private'}</p></div>
+                            <div class="text-primary"><p> ${isPublicPost ? 'Public' : 'Private'}</p></div>
                         </div>
                         <p>${post.post_text}</p>
                         ${hasPostImage ? postImageHTML : ''}
