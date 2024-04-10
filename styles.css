@@ -2,6 +2,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: #efefef;
+  font-family: "acumin-pro", "Acumin Pro", "Helvetica Neue", Helvetica, Arial,
+    sans-serif !important;
 }
 
 form {
@@ -15,19 +17,51 @@ form {
   padding: 10px;
 }
 
-.post img{
-    width: 100%;
-  }
+.post img {
+  width: 100%;
+}
 
-  .sections {
-margin: 5px 0;
+.sections {
+  margin: 5px 0;
+}
 
-  }
+.sections h4 {
+  font-family: "acumin-pro", "Acumin Pro", "Helvetica Neue", Helvetica, Arial,
+    sans-serif !important;
+}
 
-  .background-white {
-    background-color: #fff;
-  }
+.background-white {
+  background-color: #fff;
+}
 
-  .advert{
-    padding: 10px;
-  }
+.advert {
+  padding: 10px;
+}
+
+.sections ul {
+  list-style-type: none;
+}
+
+.fas {
+  padding-right: 20px;
+}
+
+.create-post textarea {
+  border-left: none !important;
+  border-right: none !important;
+  border-top: none !important;
+}
+
+.comment input{
+  border-radius: 40px;
+  background-color: #efefef;
+  padding: 10px;
+}
+
+.list-group-item{
+  cursor: pointer;
+}
+
+.post-actions{
+  cursor: pointer;
+}

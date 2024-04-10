@@ -59,31 +59,31 @@
                 <a class="nav-link text-white" href="#"><i class="fas fa-home"></i> <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="#"><i class="fas fa-info-circle"></i> About</a>
+                <a class="nav-link text-white" href="#"><i class="fas fa-tv"></i></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="#"><i class="fas fa-envelope"></i> Contact</a>
+                <a class="nav-link text-white" href="#"><i class="fas fa-envelope"></i> </a>
             </li>
         </ul>
 
         <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-                <a class="nav-link text-white" href="#"><i class="fas fa-bell"></i> Notifications</a>
+                <a class="nav-link text-white" href="#"><i class="fas fa-bell"></i> </a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-user"></i> Profile
+                    <i class="fas fa-user"></i>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="#"><i class="fas fa-user"></i> View Profile</a>
                     <a class="dropdown-item" href="signin.html"><i class="fas fa-sign-in-alt"></i> Sign In</a>
                     <a class="dropdown-item" href="signup.html"><i class="fas fa-user-plus"></i> Sign Up</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    <a class="dropdown-item" href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="#"><i class="fas fa-search"></i> Search</a>
+                <a class="nav-link text-white" href="#"><i class="fas fa-search"></i></a>
             </li>
         </ul>
     </div>
@@ -95,35 +95,38 @@
   <div class="row">
     <div class="col-md-3">
       <!-- Sidebar will go here -->
-      <h4>Categories</h4>
-      <ul class="list-group">
-        <li class="list-group-item">Football</li>
-        <li class="list-group-item">Fashion</li>
-        <li class="list-group-item">Entertainment</li>
-        <li class="list-group-item"><i class="fas fa-ellipsis-h text-primary"></i> See More</li>
-      </ul>
+      <div class="sections p-5">
+      <h5 class="pb-2">Categories</h5>
+     
+        <li class="list-group-item  mb-4">Football</li>
+        <li class="list-group-item  mb-4">Fashion</li>
+        <li class="list-group-item  mb-4">Entertainment</li>
+        <li class="list-group-item  mb-4">Football</li>
+        <li class="list-group-item  mb-4">Fashion</li>
+        <li class="list-group-item  mb-4">Entertainment</li>
+        <li class="list-group-item  text-primary">See More</li>
+        <hr>
+      </div>
+      <div class="sections p-5 pt-1">
+  <h5 class="pb-2">Your Shortcuts</h5>
+  <li class="list-group-item mb-4"><i class="fas fa-newspaper text-primary"></i>   Latest News</li>
+  <li class="list-group-item mb-4"><i class="fas fa-user-friends text-primary"></i> Friends</li>
+  <li class="list-group-item mb-4"><i class="fas fa-users text-primary"></i> Groups</li>
+  <li class="list-group-item mb-4"><i class="fas fa-shopping-bag text-primary"></i> Marketplace</li>
+  <li class="list-group-item mb-4"><i class="fas fa-tv text-primary"></i> Watch</li>
+  <li class="list-group-item mb-4"><i class="fas fa-ellipsis-h text-primary"></i> See More</li>
+      </div>
 
-    <div class="sections">
-    <h4>Sections</h4>
-    <ul class="list-group">
-        <li class="list-group-item"><i class="fas fa-newspaper text-primary"></i> Latest News</li>
-        <li class="list-group-item"><i class="fas fa-user-friends text-primary"></i> Friends</li>
-        <li class="list-group-item"><i class="fas fa-users text-primary"></i> Groups</li>
-        <li class="list-group-item"><i class="fas fa-shopping-bag text-primary"></i> Marketplace</li>
-        <li class="list-group-item"><i class="fas fa-tv text-primary"></i> Watch</li>
-        <li class="list-group-item"><i class="fas fa-ellipsis-h text-primary"></i> See More</li>
-    </ul>
-    </div>
     </div>
 
-    <div class="col-md-6">
+    <div class="col-md-6 ">
       <!-- Main content area will go here -->
       <!-- <h2>Welcome to Simple Blog</h2>
       <p>This is a simple blog platform built with Bootstrap and PHP.</p> -->
 
        <!-- Form for creating a new post -->
     <!-- Form for creating a new post -->
-<form action="submit_post.php" method="post" enctype="multipart/form-data">
+<form action="submit_post.php" method="post" enctype="multipart/form-data" class="create-post">
      <!-- Add a hidden input field to store the username -->
      <input type="hidden" name="username" value="<?php echo $_SESSION['username']; ?>">
 <!-- <div class="form-group">
@@ -139,9 +142,10 @@
   </div>
   <input type="hidden" name="postVisibility" id="postVisibilityInput" value="public">
 </div> -->
-
+<p id="usernameDisplay"></p>
    <div class="form-group">
         <div class="input-group">
+       
             <select class="custom-select" name="postVisibility" id="postVisibilityDropdown">
                 <option value="public">Public</option>
                 <option value="private">Private</option>
@@ -164,11 +168,11 @@
     <div class="form-group mt-3">
         <input type="file" id="fileInput" class="d-none" name="postImage" accept="image/*, video/*">
         <label for="fileInput" class="btn btn-light">
-            <i class="fas fa-camera"></i> Photo/Video
+            <i class="fas fa-camera text-success"></i> Photo/Video
         </label>
 
         <label for="fileInput" class="btn btn-light">
-            <i class="fas fa-video"></i> Live/Video
+            <i class="fas fa-video text-danger"></i> Live/Video
         </label>
 
     </div>
@@ -186,6 +190,7 @@
 
     <div id="postsContainer" class="postsContainer"></div>
     </div>
+    
 
     <div class="col-md-3">
       
@@ -202,7 +207,8 @@
 
 <footer class="bg-dark text-white text-center py-3 mt-5">
   <div class="container">
-    &copy; 2024 Simple Blog
+    &copy; 2024 Simple Blog  | All Right Reserved
+    <p>Developed & Maintained by Panda</p>
   </div>
 </footer>
 
@@ -255,7 +261,21 @@ crossorigin="anonymous"></script>
                         <p>${post.post_text}</p>
                         ${hasPostImage ? postImageHTML : ''}
                         ${hasEmojiImage ? emojiImageHTML : ''}
+                        <hr>
+                        <div class="post-actions text-center">
+  
+                          <span><i class="fas fa-comment"> Comment</i> </span>
+                          <span><i class="fas fa-thumbs-up"> Like</i> </span>
+                          <span><i class="fas fa-share"> Share</i> </span>
+                        </div><hr>
+
                     </div>
+                    <form class="comment">
+    <div class="form-group mt-2">
+        <input type="text" class="form-control" id="postText" name="postText" rows="3" placeholder="Write a Comment..." required></input>
+    </div>
+    <p>Press enter to comment.</p>
+    </form>
                 `;
                 postsContainer.innerHTML += postHTML;
             });
@@ -264,8 +284,17 @@ crossorigin="anonymous"></script>
 </script>
 
 
-
-
+<script>
+    // Fetch the username from the session
+    fetch('get_username.php')
+        .then(response => response.text())
+        .then(username => {
+            // Display the username within the <p> element
+            const usernameDisplay = document.getElementById('usernameDisplay');
+            usernameDisplay.textContent = ` ${username}`;
+        })
+        .catch(error => console.error('Error fetching username:', error));
+</script>
 
 </body>
 </html>
