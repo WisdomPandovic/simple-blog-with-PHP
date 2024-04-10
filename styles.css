@@ -65,3 +65,8 @@ form {
 .post-actions{
   cursor: pointer;
 }
+
+.custom-select {
+  border: none;
+  /* Optionally, you can add other styles to customize the appearance */
+}
